@@ -45,7 +45,7 @@ describe('API de tareas', () => {
 
     const r = await request(app).delete('/api/tareas/1');
 
-    expect(r.status).toBe(201);
+    expect(r.status).toBe(200);
     expect(r.body.mensaje).toBe('Tarea eliminada correctamente');
 
     const lista = await request(app).get('/api/tareas');
